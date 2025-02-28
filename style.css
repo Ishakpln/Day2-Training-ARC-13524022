@@ -1,0 +1,339 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  flex: 1;
+}
+
+section {
+  flex: 1;
+}
+
+.container {
+  background-color: rgb(45, 45, 45);
+  width: 100vw;
+  height: 9vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Schakker {
+  color: white;
+  position: relative;
+  display: flex;
+  left: 2vw;
+  font-family: "Century Gothic", sans-serif;
+  letter-spacing: 5px;
+  font-size: 34px;
+  font-weight: lighter;
+}
+
+.trapz1 {
+  background-color: rgb(83, 83, 83);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 28vw;
+  width: 50vw;
+  height: 100%;
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.Home i {
+  margin-right: 1px;
+  position: relative;
+  top: -2px;
+}
+
+.menu1 {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: 0px 20px 0px 20px;
+}
+
+.menu1 a {
+  position: relative;
+  color: white;
+  font-family: "Century Gothic", sans-serif;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: lighter;
+  left: 0vw;
+  position: relative;
+}
+
+.menu1 a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.menu1 a.active::before {
+  width: 100%;
+}
+
+.menu1 a:hover::before {
+  width: 100%;
+}
+
+.menu1:hover a.active::before {
+  width: 0%;
+}
+
+.menu1 a.active:hover::before {
+  width: 100%;
+}
+
+.trapz2 {
+  background-color: rgb(222, 82, 166);
+  position: absolute;
+  right: 0vw;
+  width: 25vw;
+  height: 100%;
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.icons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  transition: 0.1s;
+}
+
+.icons a:hover {
+  color: rgb(222, 222, 222);
+}
+
+.icons i {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.container2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  width: 5vw;
+}
+
+.sidebar a {
+  color: rgb(238, 88, 178);
+  font-size: 35px;
+  position: relative;
+}
+
+.sidebar a:hover {
+  color: rgb(209, 77, 156);
+  transition: 0.3s;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: 40vw;
+  position: relative;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(222, 82, 166);
+  font-size: 24px;
+}
+
+.filter {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-left: 10px;
+}
+.filter a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(247, 91, 184);
+  font-family: "Century Gothic", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  height: 40px;
+  width: 100px;
+  gap: 5px;
+  transition: 0.2s;
+}
+
+.filter:hover a {
+  background-color: rgb(216, 78, 161);
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.tags a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e1e1e1;
+  height: 30px;
+  padding: 0px 10px 0px 10px;
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
+  border-radius: 2px;
+  font-family: sans-serif;
+  font-size: 14px;
+  transition: 0.1s;
+}
+
+.tags a:hover {
+  background-color: #c4c4c4;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.2s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product h3 {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 22px;
+  color: #333;
+}
+
+.product p {
+  font-family: "Poppins", sans-serif;
+  color: #555;
+  margin: 8px;
+}
+
+.product img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: rgb(247, 91, 184);
+}
+
+.footer-text {
+  font-size: 14px;
+  max-width: 800px;
+  justify-self: center;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #949494;
+}
+
+.footer-sosmed {
+  margin-top: 10px;
+}
+
+.footer-sosmed a {
+  color: white;
+  font-size: 25px;
+  transition: 0.3s;
+  margin-left: 15px;
+}
+
+.footer-sosmed a:hover {
+  color: rgb(247, 91, 184);
+}
